@@ -25,8 +25,9 @@ def main():
         screen.blit(kt_img, [300, 200])
         pg.display.update()
         tmr += 1
+        if x == 3199: x = 0
         x += 1
-        clock.tick(500)
+        clock.tick(200)
 
 
 if __name__ == "__main__":

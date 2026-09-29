@@ -21,9 +21,8 @@ def main():
             if event.type == pg.QUIT: return
 
         key_lst = pg.key.get_pressed()  #キーの押下状態
-        kt_rct.move_ip(((2*key_lst[pg.K_RIGHT])-key_lst[pg.K_LEFT], key_lst[pg.K_DOWN]-key_lst[pg.K_UP]))
+        kt_rct.move_ip((-1+(2*key_lst[pg.K_RIGHT])-key_lst[pg.K_LEFT], key_lst[pg.K_DOWN]-key_lst[pg.K_UP]))
         
-        kt_rct.move_ip((-1,0))  #左に流す
         x = tmr%3200
         screen.blit(bg_img, [-x, 0])
         screen.blit(rbg_img, [-x+1600, 0])
